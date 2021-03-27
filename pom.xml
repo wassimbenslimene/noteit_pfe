@@ -60,7 +60,11 @@
             <artifactId>spring-boot-starter-tomcat</artifactId>
             <scope>provided</scope>
         </dependency>
-
+        <dependency>
+            <groupId>org.dmfs</groupId>
+            <artifactId>httpurlconnection-executor</artifactId>
+            <version>0.8</version>
+        </dependency>
        
     </dependencies>
 
