@@ -60,11 +60,7 @@
             <artifactId>spring-boot-starter-tomcat</artifactId>
             <scope>provided</scope>
         </dependency>
-        <dependency>
-            <groupId>org.dmfs</groupId>
-            <artifactId>httpurlconnection-executor</artifactId>
-            <version>0.8</version>
-        </dependency>
+        
        
     </dependencies>
 
@@ -75,6 +71,19 @@
                 <groupId>org.springframework.boot</groupId>
                 <artifactId>spring-boot-maven-plugin</artifactId>
             </plugin>
+            <plugin>
+                      <groupId>org.apache.tomcat.maven</groupId>
+                      <artifactId>tomcat8-maven-plugin</artifactId>
+                      <version>2.2</version>
+                      <configuration>
+                          <url>http://51.143.6.109:8080/manager/text</url>
+                          <server>TomcatServer</server>
+                          <path>$ReplaceWithWarFileName$</path>
+                          <update>true</update>
+                          <username>deployer</username>
+                          <password>deployer</password>
+                      </configuration>
+            </plugin>     
                  
         </plugins>
     </build>
