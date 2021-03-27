@@ -30,8 +30,7 @@ public class NotebookController {
 
     @GetMapping("/all")
     public List<Notebook> all() {
-        var allCategories = this.notebookRepository.findAll();
-        return allCategories;
+        return this.notebookRepository.findAll();
     }
 
     @PostMapping
