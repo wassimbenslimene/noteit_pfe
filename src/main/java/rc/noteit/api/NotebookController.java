@@ -40,7 +40,7 @@ public class NotebookController {
             throw new ValidationException();
         }
 
-        var notebookEntity = this.mapper.convertToNotebookEntity(notebookViewModel);
+        @Nonnull var notebookEntity = this.mapper.convertToNotebookEntity(notebookViewModel);
 
         // save notebookEntity instance to db
         this.notebookRepository.save(notebookEntity);
